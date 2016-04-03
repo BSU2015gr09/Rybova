@@ -61,7 +61,7 @@ void max_lengh(char *str,int n)
 		if( max_len_before && cur_len != maxlen) //не удаляем если слова max длины идут друг за другом
 		{
 			size_t end = strlen(source)-cur_len;
-			memmove(source-1, source + cur_len, end); //смещаем ОБЛАСТЬ ПАМЯТИ!!!! начиная с позиции след. за максимальным + токен 
+			strncpy(source-1, source + cur_len, end); //смещаем ОБЛАСТЬ ПАМЯТИ!!!! начиная с позиции след. за максимальным + токен 
 			source[end-1] = '\0';
 		}
 		else
