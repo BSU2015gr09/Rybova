@@ -4,15 +4,15 @@ using namespace std;
 
 class Complex{
 private:
-	double real; //действительная часть комплексного числа(real part)
-	double im; //мнимая чась комплексного числа(imaginary part)
+	double real; //РґРµР№СЃС‚РІРёС‚РµР»СЊРЅР°СЏ С‡Р°СЃС‚СЊ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°(real part)
+	double im; //РјРЅРёРјР°СЏ С‡Р°СЃСЊ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°(imaginary part)
 public:
 	 void swap(Complex& first, Complex& second){
 		using std::swap;
 		swap(first.im,second.im);
 		swap(first.real,second.real);
 	}
-	Complex():real(0.0),im(0.0){}// вызов конструктора для инициализаци 
+	Complex():real(0.0),im(0.0){}// РІС‹Р·РѕРІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° РґР»СЏ РёРЅРёС†РёР°Р»РёР·Р°С†Рё 
 
 	Complex(double Real, double Im=0) : real(Real),im(Im){}
 
@@ -49,9 +49,9 @@ public:
 		return result;
 	}
 
-	friend ostream& operator <<(ostream& out, Complex num);/*Перегруженные операторы >> и << для ввода и вывода. Для перегрузки определяются как дружественные операторы класса, которые имеют следующие прототипы:
-                                                            friend istream& operator >> (istream&, Имя_Класса& Имя_параметра);
-                                                            friend ostream& operator >> (ostream&, const Имя_Класса& Имя_параметра);*/
+	friend ostream& operator <<(ostream& out, Complex num);/*РџРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Рµ РѕРїРµСЂР°С‚РѕСЂС‹ >> Рё << РґР»СЏ РІРІРѕРґР° Рё РІС‹РІРѕРґР°. Р”Р»СЏ РїРµСЂРµРіСЂСѓР·РєРё РѕРїСЂРµРґРµР»СЏСЋС‚СЃСЏ РєР°Рє РґСЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Рµ РѕРїРµСЂР°С‚РѕСЂС‹ РєР»Р°СЃСЃР°, РєРѕС‚РѕСЂС‹Рµ РёРјРµСЋС‚ СЃР»РµРґСѓСЋС‰РёРµ РїСЂРѕС‚РѕС‚РёРїС‹:
+                                                            friend istream& operator >> (istream&, РРјСЏ_РљР»Р°СЃСЃР°& РРјСЏ_РїР°СЂР°РјРµС‚СЂР°);
+                                                            friend ostream& operator >> (ostream&, const РРјСЏ_РљР»Р°СЃСЃР°& РРјСЏ_РїР°СЂР°РјРµС‚СЂР°);*/
 	friend istream& operator >>(istream& in, Complex& num);
 
 
