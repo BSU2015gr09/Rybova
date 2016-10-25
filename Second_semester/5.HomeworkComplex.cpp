@@ -12,7 +12,7 @@ public:
 		swap(first.im,second.im);
 		swap(first.real,second.real);
 	}
-	Complex():real(0.0),im(0.0){}// вызов конструктора для инициализаци 
+	Complex():real(0.0),im(0.0){} // вызов конструктора для инициализаци 
 
 	Complex(double Real, double Im=0) : real(Real),im(Im){}
 
@@ -26,13 +26,6 @@ public:
 		swap(*this,other);
 		return *this;
 	}
-
-	/*Complex& operator = (const Complex& other){
-	Complex temp(other);
-	swap(*this,temp);
-	return *this;
-	}*/
-
 
 	const Complex operator+ (const Complex& other)const {
 		Complex result(real+other.real,im+other.im);
@@ -95,9 +88,10 @@ istream& operator >>(istream& in, Complex& num){
 int main(int argc, char const *argv[])
 {
 	Complex a,b,res;
+	Complex* t=new Complex;
+	cout<<(*t);
 	cin>>a>>b;
 	cout<<"Addition: "<<a+b;
-	cout<<"Multiplication: "<<a*b;
 	cout<<"Subtraction: "<<a-b;
 	return 0;
 }
